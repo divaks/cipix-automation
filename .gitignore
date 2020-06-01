@@ -8,4 +8,4 @@ node_modules
 .vscode
 
 #Debug log
-.debug.log
+debug.log
