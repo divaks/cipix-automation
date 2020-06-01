@@ -1,0 +1,11 @@
+#Environmenal variables
+.env
+
+#Node modules
+node_modules
+
+#VSCode config
+.vscode
+
+#Debug log
+.debug.log
