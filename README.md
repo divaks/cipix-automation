@@ -6,6 +6,7 @@ There are 2 scenarios -
 
 **General weather** is when the user needs weather information for a given city. This can be current weather or forecast for a given time for up to 5 days in the future. 
 
+
 ## Prerequisites
 
 **1. Install Node.js**  
@@ -17,3 +18,45 @@ There are 2 scenarios -
     ```
     npm install -g nodemon
     ```
+
+## Environment setup
+You will need the environment variables in '.env' file in the root folder that must contain the following. You may start by making a copy of '.env.example' file into '.env':
+```
+# Weather API
+WEATHER_APP_ID=                         #Weather API App ID
+WEATHER_URL=http://api.openweathermap.org/data/2.5/
+WEATHER_BY_CITY_PREFIX=weather?q=
+WEATHER_BY_CITYTIME_PREFIX=forecast?q=
+WEATHER_HOURLY_PREFIX=onecall?lat=
+WEATHER_HOURLY2=&lon=
+WEATHER_HOURLY3=&exclude=current,minutely,daily
+WEATHER_SUFFIX=&units=metric&APPID=     #Weather API App ID
+
+# Google API
+GOOGLE_API_KEY=                         #Google API Key
+
+# Flight API
+FLIGHTSTATS_URL=https://api.flightstats.com/flex/schedules/rest/v1/json/flight/
+FLIGHTSTATS_2=/departing/
+FLIGHTSTATS_SUFFIX=?appId=0ff39606&appKey=      #Flight Stats API App key
+FLIGHTSTATS_APP_ID=                             #Flight Stats API App ID
+FLIGHTSTATS_APP_KEY=                            #Flight Stats API App key
+
+# PORT
+PORT=3000   #You can set port number here. Default port is 3000.
+```
+
+## Installation of dependent packages
+```
+npm install
+```
+
+## Running the project
+```
+npm start
+```
+'npm start' is aliased to 'nodemon app', which runs the application using nodemon.  
+Access the local application using a browser:  
+http://localhost:{PORT-NUMBER}/  
+If you use the default port (3000):  
+http://localhost:3000/  
