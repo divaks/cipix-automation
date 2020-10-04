@@ -18,6 +18,9 @@ There are 2 scenarios -
     ```
     npm install -g nodemon
     ```
+**3. Install ngrok:**  
+    In case you don't have ngrok installed, 
+    Download ngrok from https://ngrok.com/download
 
 ## Environment setup
 You will need the environment variables in '.env' file in the root folder that must contain the following. You may start by making a copy of '.env.example' file into '.env':
@@ -60,3 +63,10 @@ Access the local application using a browser:
 http://localhost:{PORT-NUMBER}/  
 If you use the default port (3000):  
 http://localhost:3000/  
+
+## Using tunnel
+```
+npm start tunnel
+```
+This is aliased to 'ngrok http 3000'.
+Running this command returns the public URL for the application, which needs to be configured in dialogflow webhook.
